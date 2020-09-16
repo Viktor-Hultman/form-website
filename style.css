@@ -2,42 +2,55 @@ html, body {
     margin: 0px;
     padding: 0px;
     scroll-behavior: smooth;
-    font-family:'Roboto', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     max-width: 100%;
     overflow-x: hidden;
   }
 
-header {
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    background-image: linear-gradient(90deg,#ffd89b, #19547b);
+.nav-container {
+    background-color: #19547b;
 }
 
-h1 {
-    font-size: 60px;
-    font-weight: 900;
-    text-shadow: 5px 10px 10px #383838;
+.logo-container {
+    display: flex;
+    margin-right: auto;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.company-name {
+    font-size: 40px;
+    font-family: 'Asap', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color:rgba(255, 255, 255, 0.932);
+    /* text-shadow: 5px 10px 10px #383838; */
+    margin: 0px;
+    padding: 5px 15px 5px 10px;
 }
 
 .nav-list {
-    margin: 0px;
+    margin: 0px 20px 0px 0px;
     padding: 0px;
     list-style-type: none;
     display: flex;
     justify-content: center;
-    background-color: rgb(0, 61, 61);
-    width: 100vw;
-    height: 50px;
+    background-color: #19547b;
+    height: 70px;
 }
 
 .nav-item {
-    background-color: rgb(0, 61, 61);
+    background-color: #19547b;
     font-size: 20px;
     font-weight: 200;
     padding: 0px 10px;
     display: flex;
-    align-items: center;  
+    align-items: center; 
 }
 
 .nav-link {
@@ -47,22 +60,148 @@ h1 {
 }
 
 .nav-item:hover {
-    background-color: rgb(0, 110, 110);
+    background-color: #1f628f;
+}
+
+.main-header-container {
+    margin-bottom: -7px;
 }
 
 main {
     max-width: 100%;
-    height: 76.7vh;
+    height: 100%;
     background-image: linear-gradient(#c2c2c2, #3d464e);
+    margin: 0px;
 }
 
+.main-img {
+    max-width: 100%;
+    margin: 0px;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+}
+
+.section-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img-container {
+    flex-basis: 460px;
+    flex-grow: 1;
+    margin: 0px 0px -6px 0px;
+}
+
+.section-img {
+    width: 100%;
+    margin: 0px;
+}
+
+.article-content {
+    flex-basis: 460px;
+    flex-grow: 1;
+    padding: 0px 0px 6px 0px;
+    margin: 0px;
+}
+
+#article2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-headline {
+    font-size: 30px;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.05em;
+    margin: 0px;
+    padding: 2% 5% 0% 5%;
+}
+
+.article-sub-headline {
+    font-size: 20px;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.05em;
+    margin: 0px;
+    padding: 0% 5% 0% 5%;
+}
+
+.article-text {
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    padding: 0% 5% 2% 5%;
+}
+
+.icon-text-container {
+    display: flex;
+    padding: 2% 0% 0% 5%;
+    line-height: 0.5cm;
+}
+
+.text-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.text-link {
+    color: #e86f2d;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: #ff8c4e;
+}
 
 footer {
     color: white;
-    background-color:  rgb(0, 30, 30);
+    background-color: #19547b;
     display: flex;
     justify-content: center;
     padding: 10px;
     font-size: 15px;
     font-weight: 100;
+}
+
+/* When the screen changes from "portrait-mode" to "landscape-mode" the order of
+the second text and image of the home page changes*/
+@media screen and (min-width: 950px) {
+
+    article#article1 {
+        order:1;
+    }
+    article#article2 {
+        order:2;
+    }
+    article#article3 {
+        order:4;
+    }
+    article#article4 {
+        order:3;
+    }
+    article#article5 {
+        order:5;
+    }
+    article#article6 {
+        order:6;
+    }
 }
