@@ -7,9 +7,10 @@
     <meta name="description" content="This is a little website where you can learn more about me and find some contact information!"> 
 
     <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Tajawal&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
+    
     <nav class="nav-container">
         <ul class="nav-list">
             <header class="logo-container item0">
@@ -22,8 +23,39 @@
         </ul>
     </nav>
     <main>
-        <section class="main-container">
-            <h2></h2>
+        <section class="main-sign-up-container">
+            <article class="img-section-sign-up">
+                <img class="section-img" src="img/sign-up-img.jpg">
+            </article>
+            <article class="form-section">
+                <form class="sign-up-form" action="registered.html">
+                    <br>
+                    <label for="title" id="title-label">Enter the movies title</label>
+                    <input
+                        type="text"
+                        name="title"
+                        id="new-movie-title"
+                        placeholder="Title"
+                    />
+                    <label for="url" id="url-label">Enter the image url</label>
+                    <input
+                        type="text"
+                        name="imgUrl"
+                        id="new-movie-url"
+                        placeholder="Image url"
+                    />
+                    <label for="bio" id="bio-label">Enter the movie bio</label>
+                    <textarea type="text" name="bio" id="new-movie-bio" placeholder="Movie bio..."></textarea>
+                    <label for="age" id="age-label">Enter the age limit of the movie (if any)</label>
+                    <select name="age" id="new-movie-age-restriction">
+                        <option value="" >Age limit</option>  
+                        <option value="7">7+</option>
+                        <option value="11">11+</option>
+                        <option value="15">15+</option>
+                    </select>
+                    <button type="submit" id="submit" value="Submit">Register</button>
+                </form>
+            </article>
         </section>
     </main>
     <footer>Viktor Hultman</footer>
