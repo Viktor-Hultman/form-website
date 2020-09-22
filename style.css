@@ -181,52 +181,81 @@ main {
 .main-sign-up-container {
     display:flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .img-section-sign-up {
     display:flex;
-    flex-basis: 350px;
+    flex-basis: 475px;
     flex-grow: 1;
 }
 
 .sign-up-img {
-    max-width: 100%
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .form-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 350px;
+    flex-basis: 475px;
     flex-grow: 1;
+    height: 100%;
+    padding: 15px;
 }
 
 .sign-up-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 70%;
-    width: 70%;
-    text-align: center;
+    height: 80%;
+    width: 80%;
     background-color: lightgray;
     border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-button {
-    text-align: center;
-    width: 100px;
-    background-color: white;
-    color: black;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
+label {
+    margin-top: 8px;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.05em;
+    font-size: 15;
+}
+
+input[type=text], select {
+    width: 50%;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    
   }
+
+.button {
+    background-color: #19547b;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #3d464e;
+  }
+
+.button:hover {
+    background-color: #2786c5;
+    color:black;
+}
 
 footer {
     color: white;
-    background-color: #19547b;
+    background-color: #164564;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -234,9 +263,26 @@ footer {
     font-weight: 100;
 }
 
+.logo-footer {
+    width: 20px;
+    height: 20px;
+    padding-top: 5px;
+}
+
+.company-name-footer {
+    font-size: 20px;
+    font-family: 'Asap', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color:rgba(255, 255, 255, 0.932);
+    /* text-shadow: 5px 10px 10px #383838; */
+    margin: 0px;
+    padding: 5px;;
+}
+
 /* When the screen changes from "portrait-mode" to "landscape-mode" the order of
 the second text and image of the home page changes*/
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 935px) {
 
     article#article1 {
         order:1;
@@ -255,5 +301,14 @@ the second text and image of the home page changes*/
     }
     article#article6 {
         order:6;
+    }
+}
+
+@media screen and (max-width: 985px) {
+    article#article7 {
+        order:8;
+    }
+    article#article8 {
+        order:7;
     }
 }
