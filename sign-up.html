@@ -13,10 +13,10 @@
     
     <nav class="nav-container">
         <ul class="nav-list">
-            <header class="logo-container item0">
-                <img class="logo" src="img/sport.png">
+            <li class="logo-container item0">
+                <img class="logo" src="img/sport.png" alt="company logo">
                 <h1 class="company-name">Rush</h1>
-            </header>
+            </li>
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="">Sign-up</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -24,43 +24,48 @@
     </nav>
     <main>
         <section class="main-sign-up-container">
-            <article class="img-section-sign-up" id="article7">
-                <img class="section-img" src="img/sign-up-img.jpg">
-            </article>
-            <article class="form-section" id="article8">
-                <form class="sign-up-form" action="registered.html">
-                    <label for="name" class="text-lable">Enter your full name</label> 
-                    <input type="text" name="name" class="text-input" placeholder="First and Lastname">
+            <div class="img-section-sign-up" id="article7">
+                <img class="section-img" src="img/massage.jpg" alt="picture of a professional massage">
+            </div>
+            <div class="form-section" id="article8">
+                <form class="sign-up-form" name="signUpForm" action="registered.html">
+                    <label for="name" class="text-lable">Enter your full name:</label> 
+                    <input type="text" name="name" class="text-input" id="name" placeholder="First and Lastname">
                     
-                    <label for="email" class="text-label">Enter your Email</label> 
-                    <input type="text" name="email" class="text-input" placeholder="Email:">
+                    <label for="email" class="text-label">Enter your Email:</label> 
+                    <input type="text" name="email" class="text-input" id="email" placeholder="Email">
 
-                    <label for="phone" class="text-label">Enter your Phone-number</label> 
-                    <input type="text" name="phone" class="text-input" placeholder="Number:">
+                    <label for="phone" class="text-label">Enter your Phone-number:</label> 
+                    <input type="text" name="phone" class="text-input" id="phone" placeholder="Number">
 
-                    <label for="address" class="text-label">Enter your home address</label> 
-                    <input type="text" name="address" class="text-input" placeholder="Address:">
+                    <label for="address" class="text-label">Enter your home address:</label> 
+                    <input type="text" name="address" class="text-input" id="address" placeholder="Address">
 
-                    <label for="zip" class="text-label">Enter your Zip-code</label> 
-                    <input type="text" name="zip" class="text-input" placeholder="Zip-code:">
+                    <label for="zip" class="text-label">Enter your Zip-code:</label> 
+                    <input type="text" name="zip" class="text-input" id="zip" placeholder="Zip-code">
                     
 
                     <label for="package" id="option-label">Choose a sign-up package</label>
-                    <select name="package" class="option-input">
+                    <select name="package" class="option-input" id="package">
                         <option value="" >Choose one of the options</option>
                         <option value="PT-package">PT-package: 20% for your first year</option>
                         <option value="Tan-package">Tan-package: Accses to tanning beds</option>
                         <option value="No-package">No sign-up package</option>
                     </select>
+
+                    <span class="error" id="error"></span>
+
                     <input class="button" type="submit" value="Register">
+
                 </form>
-            </article>
+            </div>
         </section>
     </main>
     <footer>
         <img class="logo-footer" src="img/sport.png" alt="company logo">
-        <h1 class="company-name-footer">Rush</h1>
+        <h3 class="company-name-footer">Rush</h3>
     </footer>
-</body>
 <script src="main.js"></script>
+</body>
+
 </html>

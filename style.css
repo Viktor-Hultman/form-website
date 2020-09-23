@@ -1,3 +1,9 @@
+/* Custom properties */
+:root {
+    --main-blue-color: #19547b;
+}
+
+
 html, body {
     margin: 0px;
     padding: 0px;
@@ -6,10 +12,6 @@ html, body {
     max-width: 100%;
     overflow-x: hidden;
   }
-
-.nav-container {
-    background-color: #19547b;
-}
 
 .logo-container {
     display: flex;
@@ -29,28 +31,28 @@ html, body {
     font-style: italic;
     font-weight: 700;
     color:rgba(255, 255, 255, 0.932);
-    /* text-shadow: 5px 10px 10px #383838; */
     margin: 0px;
-    padding: 5px 15px 5px 10px;
+    padding: 5px 5px 5px 10px;
 }
 
 .nav-list {
-    margin: 0px 20px 0px 0px;
-    padding: 0px;
+    margin: 0px;
+    padding: 0px 20px 0px 0px;
     list-style-type: none;
     display: flex;
     justify-content: center;
-    background-color: #19547b;
+    background-color: var(--main-blue-color);
     height: 70px;
 }
 
 .nav-item {
-    background-color: #19547b;
+    background-color: var(--main-blue-color);
     font-size: 20px;
     font-weight: 200;
     padding: 0px 10px;
     display: flex;
     align-items: center; 
+    transition-duration: 0.2s;
 }
 
 .nav-link {
@@ -65,12 +67,25 @@ html, body {
 
 .main-header-container {
     margin-bottom: -7px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.main-img-text {
+    position: absolute;
+    font-size: 18px;
+    width: 30%;
+    top: 30%;
+    left: 15%;
+    padding-left: 20px;
+    transform: translate(-30%, -15%);
 }
 
 main {
     max-width: 100%;
     height: 100%;
-    background-image: linear-gradient(#c2c2c2, #3d464e);
+    background: linear-gradient(#c2c2c2, #3d464e);
     margin: 0px;
 }
 
@@ -86,11 +101,6 @@ main {
     flex-wrap: wrap;
     padding: 0px;
     margin: 0px;
-}
-
-.section-container {
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .img-container {
@@ -152,6 +162,7 @@ main {
     color: white;
     margin: 0px;
     padding: 0% 5% 2% 5%;
+    line-height: 1.2;
 }
 
 .icon-text-container {
@@ -172,6 +183,32 @@ main {
 
 .text-link:hover {
     color: #ff8c4e;
+}
+
+footer {
+    color: white;
+    background-color: #164564;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.logo-footer {
+    width: 20px;
+    height: 20px;
+    padding-top: 5px;
+}
+
+.company-name-footer {
+    font-size: 20px;
+    font-family: 'Asap', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color:rgba(255, 255, 255, 0.932);
+    margin: 0px;
+    padding: 5px;;
 }
 
 /* End of index.html css */
@@ -221,7 +258,7 @@ label {
     margin-top: 8px;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 0.05em;
-    font-size: 15;
+    font-size: 19px;
 }
 
 input[type=text], select {
@@ -229,11 +266,20 @@ input[type=text], select {
     padding: 5px 10px;
     border: 1px solid black;
     border-radius: 5px;
-    
   }
 
+.error {
+    font-family: 'Bebas Neue', cursive;
+    width: 60%;
+    color: white;
+    background-color: red;
+    border-radius: 2px;
+    margin-top: 8px;
+    text-align: center;
+}
+
 .button {
-    background-color: #19547b;
+    background: linear-gradient(var(--main-blue-color), #0c2a3d);
     border: none;
     color: white;
     padding: 8px 20px;
@@ -249,54 +295,40 @@ input[type=text], select {
   }
 
 .button:hover {
-    background-color: #2786c5;
+    background: linear-gradient(#5498c5, #355e79);
     color:black;
 }
 
-footer {
-    color: white;
-    background-color: #164564;
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 100;
-}
+/* The media queries below where made from examples I found from this stack overflow Q&A. */
 
-.logo-footer {
-    width: 20px;
-    height: 20px;
-    padding-top: 5px;
-}
+/* When the screen changes from "portrait-mode" to "landscape-mode" some of the order of
+the text and images of the website changes*/
 
-.company-name-footer {
-    font-size: 20px;
-    font-family: 'Asap', sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    color:rgba(255, 255, 255, 0.932);
-    /* text-shadow: 5px 10px 10px #383838; */
-    margin: 0px;
-    padding: 5px;;
-}
-
-/* When the screen changes from "portrait-mode" to "landscape-mode" the order of
-the second text and image of the home page changes*/
+ 
 @media screen and (min-width: 935px) {
 
-    article#article1 {
+    .main-img-text {
+        position: absolute;
+        width: 30%;
+        top: 40%;
+        left: 25%;
+        padding-left: 20px;
+        transform: translate(-40%, -25%);
+    }
+
+    div#article1 {
         order:1;
     }
     article#article2 {
         order:2;
     }
-    article#article3 {
+    div#article3 {
         order:4;
     }
     article#article4 {
         order:3;
     }
-    article#article5 {
+    div#article5 {
         order:5;
     }
     article#article6 {
@@ -305,10 +337,10 @@ the second text and image of the home page changes*/
 }
 
 @media screen and (max-width: 985px) {
-    article#article7 {
+    div#article7 {
         order:8;
     }
-    article#article8 {
+    div#article8 {
         order:7;
     }
 }
