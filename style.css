@@ -49,12 +49,12 @@ html, body {
     display: flex;
     justify-content: center;
     background-color: var(--main-blue-color);
-    height: 70px;
+    height: 80px;
 }
 
 .nav-item {
     background-color: var(--main-blue-color);
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 200;
     padding: 0px 10px;
     display: flex;
@@ -72,29 +72,19 @@ html, body {
 }
 
 .main-header-container {
-    margin-bottom: -7px;
     position: relative;
     text-align: center;
     color: white;
     z-index: 1;
-}
-
-.main-img-text {
-    position: absolute;
-    z-index: 2;
-    font-size: 18px;
-    width: 30%;
-    top: 30%;
-    left: 15%;
-    padding-left: 20px;
-    transform: translate(-30%, -15%);
+    width: 100%;
+    margin: 0px 0px -7px 0px;
 }
 
 main {
     max-width: 100%;
     height: 100%;
-    background: linear-gradient(#c2c2c2, #3d464e);
-    margin: 70px 0px 0px 0px;
+    background: linear-gradient(#7a848d, #252f38);
+    margin: 80px 0px 0px 0px;
 }
 
 /* Start of index.html */
@@ -102,6 +92,17 @@ main {
 .main-img {
     max-width: 100%;
     margin: 0px;
+}
+
+.main-img-text {
+    position: absolute;
+    z-index: 2;
+    font-size: 24px;
+    width: 30%;
+    top: 30%;
+    left: 15%;
+    padding-left: 20px;
+    transform: translate(-30%, -15%);
 }
 
 .main-container {
@@ -112,7 +113,7 @@ main {
 }
 
 .img-container {
-    flex-basis: 460px;
+    flex-basis: 600px;
     flex-grow: 1;
     margin: 0px 0px -6px 0px;
 }
@@ -123,7 +124,7 @@ main {
 }
 
 .article-content {
-    flex-basis: 460px;
+    flex-basis: 600px;
     flex-grow: 1;
     padding: 0px 0px 6px 0px;
     margin: 0px;
@@ -147,44 +148,64 @@ main {
     justify-content: center;
 }
 
-.article-headline {
-    font-size: 30px;
+.headline {
+    text-align: center;
+    font-size: 35px;
     color: white;
     font-family: 'Bebas Neue', cursive;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     margin: 0px;
-    padding: 2% 5% 0% 5%;
+    padding: 30px 10px;
+}
+
+.article-headline {
+    font-size: 35px;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.06em;
+    margin: 0px;
+    padding: 10px 20px 0px 20px;
 }
 
 .article-sub-headline {
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     font-family: 'Bebas Neue', cursive;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
+    line-height: 110%;
     margin: 0px;
-    padding: 0% 5% 0% 5%;
+    padding: 0px 0px 0px 20px;
+}
+
+.article-text-list {
+    font-size: 22px;
+    color: white;
+    margin: 0px;
+    padding: 0px 0px 0px 20px;
+    line-height: 1.2;
 }
 
 .article-text {
-    font-size: 18px;
+    font-size: 22px;
     color: white;
     margin: 0px;
-    padding: 0% 5% 2% 5%;
+    padding: 0px 20px 0px 20px;
     line-height: 1.2;
 }
 
 .icon-text-container {
     display: flex;
-    padding: 2% 0% 0% 5%;
+    padding: 10px 20px 10px 20px;
     line-height: 0.5cm;
 }
 
 .text-icon {
-    width: 70px;
-    height: 70px;
+    width: 64px;
+    height: 64px;
 }
 
 .text-link {
+    font-size: 25px;
     color: #e86f2d;
     text-decoration: none;
 }
@@ -231,7 +252,7 @@ footer {
 
 .img-section-sign-up {
     display:flex;
-    flex-basis: 475px;
+    flex-basis: 600px;
     flex-grow: 1;
 }
 
@@ -244,10 +265,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 475px;
+    flex-basis: 600px;
     flex-grow: 1;
     height: 100%;
-    padding: 15px;
+    padding: 15px 40px;
 }
 
 .sign-up-form {
@@ -266,12 +287,12 @@ label {
     margin-top: 8px;
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 0.05em;
-    font-size: 19px;
+    font-size: 22px;
 }
 
 input ,select{
     width: 50%;
-    padding: 5px 10px;
+    padding: 10px 10px;
     border: 1px solid black;
     border-radius: 5px;
   }
@@ -288,6 +309,7 @@ input, select:invalid {
     margin-top: 8px;
     padding: 0px 10px;
     text-align: center;
+    font-size: 20px;
 }
 
 .button {
@@ -295,16 +317,16 @@ input, select:invalid {
     border: none;
     color: white;
     padding: 8px 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
-    display: inline-block;
     font-size: 16px;
     margin-top: 10px;
     margin-bottom: 10px;
     transition-duration: 0.4s;
     cursor: pointer;
-    border: 2px solid #3d464e;
-    width: 100px;
+    border: 2px solid #000000;
+    height: 50px;
+    width: 130px;
   }
 
 .button:hover {
@@ -343,13 +365,49 @@ input, select:invalid {
     transform: translate(-50%, -50%);
 }
 
-/* The media queries below where made from examples I found from this stack overflow Q&A. */
+/* End of registered.html */
+
+/* Start of contact.html */
+
+.text {
+    display: flex;
+    align-items: center;
+}
+
+#contact-article{
+    flex-basis: 400px;
+    flex-grow: 1;
+    padding: 20px 0px 6px 0px;
+    margin: 0px;
+}
+
+#contact-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 400px;
+    flex-grow: 1;
+    padding: 5px 5px 0px 5px;
+    margin: 20px;
+    background-color: lightgray;
+    border-radius: 10%;
+}
+
+#contact-img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+/* Start of contact.html */
+
+
+/* The media queries below where made using examples I found from this stack overflow Q&A: https://stackoverflow.com/questions/55556829/how-to-reorder-the-flex-items-when-resizing-the-screen */
 
 /* When the screen changes from "portrait-mode" to "landscape-mode" some of the order of
 the text and images of the website changes*/
 
  
-@media screen and (min-width: 935px) {
+@media screen and (min-width: 1200px) {
 
     .main-img-text {
         position: absolute;
@@ -380,11 +438,82 @@ the text and images of the website changes*/
     }
 }
 
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 1280px) {
     div#article7 {
         order:8;
     }
     div#article8 {
         order:7;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .logo-container {
+        display: flex;
+        margin-right: auto;
+        margin-left: 10px;
+        align-items: center;
+    }
+    
+    .logo {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .company-name {
+        font-size: 30px;
+        font-family: 'Asap', sans-serif;
+        font-style: italic;
+        font-weight: 700;
+        color:rgba(255, 255, 255, 0.932);
+        margin: 0px;
+        padding: 5px 5px 5px 10px;
+    }
+    
+    .nav-list {
+        margin: 0px;
+        padding: 0px 10px 0px 0px;
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color: var(--main-blue-color);
+        height: 80px;
+    }
+    
+    .nav-item {
+        background-color: var(--main-blue-color);
+        font-size: 20px;
+        font-weight: 200;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center; 
+    }
+
+    .main-img-text {
+        position: absolute;
+        z-index: 2;
+        font-size: 18px;
+        width: 30%;
+        top: 15%;
+        left: 5%;
+        transform: translate(-15%, -5%);
+    }
+
+    input ,select{
+        width: 70%;
+        padding: 10px 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+}
+
+@media screen and (max-width: 335px) {
+    .main-img-text {
+        display: none;
+    }
+
+    .main-img {
+        display: none;
     }
 }
