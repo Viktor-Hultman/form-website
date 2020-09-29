@@ -18,18 +18,21 @@
             </li>
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign-up</a></li>
-            <li class="nav-item"><a class="nav-link" href="">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="main-container">
-            <h2></h2>
-        </section>
+    <main id="thank-you-main">
+        <div id="thank-you-message">
+            <h2 id="message-text">Thank you <span id="data"></span> for registering!</h2>
+        </div>
     </main>
     <footer>
         <img class="logo-footer" src="img/sport.png" alt="company logo">
         <h3 class="company-name-footer">Rush</h3>
     </footer>
-<script src="main.js"></script>
+    <script >
+       document.getElementById("data").innerHTML=localStorage.getItem("textvalue");
+    </script>
 </body>
+
 </html>

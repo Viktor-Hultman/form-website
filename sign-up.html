@@ -28,25 +28,25 @@
                 <img class="section-img" src="img/massage.jpg" alt="picture of a professional massage">
             </div>
             <div class="form-section" id="article8">
-                <form class="sign-up-form" name="signUpForm" action="registered.html">
+                <form class="sign-up-form" name="signUpForm" id="signUpForm" action="registered.html">
                     <label for="name" class="text-lable">Enter your full name:</label> 
-                    <input type="text" name="name" class="text-input" id="name" placeholder="First and Lastname">
+                    <input type="text" name="name" class="text-input" id="name" placeholder="First and Lastname" required>
                     
                     <label for="email" class="text-label">Enter your Email:</label> 
-                    <input type="text" name="email" class="text-input" id="email" placeholder="Email">
+                    <input type="email" name="email" class="text-input" id="email" placeholder="Email" required>
 
                     <label for="phone" class="text-label">Enter your Phone-number:</label> 
-                    <input type="text" name="phone" class="text-input" id="phone" placeholder="Number">
+                    <input type="tel" name="phone" class="text-input" id="phone" placeholder="Number" required>
 
                     <label for="address" class="text-label">Enter your home address:</label> 
-                    <input type="text" name="address" class="text-input" id="address" placeholder="Address">
+                    <input type="text" name="address" class="text-input" id="address" placeholder="Address" required>
 
                     <label for="zip" class="text-label">Enter your Zip-code:</label> 
-                    <input type="text" name="zip" class="text-input" id="zip" placeholder="Zip-code">
+                    <input type="text" name="zip" class="text-input" id="zip" placeholder="Zip-code" required>
                     
 
                     <label for="package" id="option-label">Choose a sign-up package</label>
-                    <select name="package" class="option-input" id="package">
+                    <select name="package" class="option-input" id="package" required>
                         <option value="" >Choose one of the options</option>
                         <option value="PT-package">PT-package: 20% for your first year</option>
                         <option value="Tan-package">Tan-package: Accses to tanning beds</option>
@@ -55,7 +55,7 @@
 
                     <span class="error" id="error"></span>
 
-                    <input class="button" type="submit" value="Register">
+                    <input class="button" type="submit" value="Register" onclick="giveInfo()">
 
                 </form>
             </div>
@@ -65,7 +65,7 @@
         <img class="logo-footer" src="img/sport.png" alt="company logo">
         <h3 class="company-name-footer">Rush</h3>
     </footer>
-<script src="main.js"></script>
-</body>
 
+</body>
+<script src="main.js"></script>
 </html>

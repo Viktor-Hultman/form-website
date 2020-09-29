@@ -35,6 +35,13 @@ html, body {
     padding: 5px 5px 5px 10px;
 }
 
+.nav-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
 .nav-list {
     margin: 0px;
     padding: 0px 20px 0px 0px;
@@ -52,7 +59,6 @@ html, body {
     padding: 0px 10px;
     display: flex;
     align-items: center; 
-    transition-duration: 0.2s;
 }
 
 .nav-link {
@@ -70,10 +76,12 @@ html, body {
     position: relative;
     text-align: center;
     color: white;
+    z-index: 1;
 }
 
 .main-img-text {
     position: absolute;
+    z-index: 2;
     font-size: 18px;
     width: 30%;
     top: 30%;
@@ -86,7 +94,7 @@ main {
     max-width: 100%;
     height: 100%;
     background: linear-gradient(#c2c2c2, #3d464e);
-    margin: 0px;
+    margin: 70px 0px 0px 0px;
 }
 
 /* Start of index.html */
@@ -261,20 +269,24 @@ label {
     font-size: 19px;
 }
 
-input[type=text], select {
+input ,select{
     width: 50%;
     padding: 5px 10px;
     border: 1px solid black;
     border-radius: 5px;
   }
 
+input, select:invalid {
+    background-color: lightpink;
+}
+
 .error {
     font-family: 'Bebas Neue', cursive;
-    width: 60%;
     color: white;
     background-color: red;
-    border-radius: 2px;
+    border-radius: 3px;
     margin-top: 8px;
+    padding: 0px 10px;
     text-align: center;
 }
 
@@ -292,11 +304,43 @@ input[type=text], select {
     transition-duration: 0.4s;
     cursor: pointer;
     border: 2px solid #3d464e;
+    width: 100px;
   }
 
 .button:hover {
     background: linear-gradient(#5498c5, #355e79);
     color:black;
+}
+
+/* End of sign-up.html */
+
+/* Start of registered.html */
+
+#thank-you-main {
+    height: 79.8vh;
+    background: linear-gradient(#c2c2c2, #3d464e);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#thank-you-message {
+    text-align: center;
+    width: 50%;
+    height: 300px;
+    background-color: lightgray;
+    border-radius: 15px;
+}
+
+#message-text {
+    margin: 0px;
+    position: absolute;
+    font-size: 24px;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* The media queries below where made from examples I found from this stack overflow Q&A. */
