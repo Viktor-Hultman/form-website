@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Rush - Become fit in a modern gym</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Rush is a gym with a modern interior and cutting-edge equipment to make sure you get the best enviroment in your new second home"> 
+    <meta name="description"
+        content="Rush is a gym with a modern interior and cutting-edge equipment to make sure you get the best enviroment in your new second home">
 
     <link href="style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Tajawal&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Asap&family=Tajawal&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+
     <nav class="nav-container">
         <ul class="nav-list">
             <li class="logo-container item0">
@@ -22,50 +26,49 @@
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <main>
-        <section class="main-sign-up-container">
-            <div class="img-section-sign-up" id="article7">
-                <img class="section-img" src="img/massage.jpg" alt="picture of a professional massage">
-            </div>
-            <div class="form-section" id="article8">
-                <form class="sign-up-form" name="signUpForm" id="signUpForm" action="registered.html">
-                    <label for="name" class="text-lable">Enter your full name:</label> 
-                    <input type="text" name="name" class="text-input" id="name" placeholder="First and Lastname" required>
-                    
-                    <label for="email" class="text-label">Enter your Email:</label> 
-                    <input type="email" name="email" class="text-input" id="email" placeholder="Email" required>
+    <main class="main-sign-up-container">
+        <div class="img-section-sign-up" id="article7">
+            <img class="section-img" src="img/massage.jpg" alt="picture of a professional massage">
+        </div>
+        <div class="form-section" id="article8">
+            <form class="sign-up-form" name="signUpForm" id="signUpForm" action="registered.html">
+                <label for="name" class="text-lable">Enter your full name:</label>
+                <input type="text" name="name" class="text-input" id="name" placeholder="First and Lastname" required>
 
-                    <label for="phone" class="text-label">Enter your Phone-number:</label> 
-                    <input type="tel" name="phone" class="text-input" id="phone" placeholder="Number" required>
+                <label for="email" class="text-label">Enter your Email:</label>
+                <input type="email" name="email" class="text-input" id="email" placeholder="Email" required>
 
-                    <label for="address" class="text-label">Enter your home address:</label> 
-                    <input type="text" name="address" class="text-input" id="address" placeholder="Address" required>
+                <label for="phone" class="text-label">Enter your Phone-number:</label>
+                <input type="tel" name="phone" class="text-input" id="phone" placeholder="Number" required>
 
-                    <label for="zip" class="text-label">Enter your Zip-code:</label> 
-                    <input type="text" name="zip" class="text-input" id="zip" placeholder="Zip-code" required>
-                    
+                <label for="address" class="text-label">Enter your home address:</label>
+                <input type="text" name="address" class="text-input" id="address" placeholder="Address" required>
 
-                    <label for="package" id="option-label">Choose a sign-up package</label>
-                    <select name="package" class="option-input" id="package" required>
-                        <option value="" >Choose one of the options</option>
-                        <option value="PT-package">PT-package: 20% for your first year</option>
-                        <option value="Tan-package">Tan-package: Accses to tanning beds</option>
-                        <option value="No-package">No sign-up package</option>
-                    </select>
+                <label for="zip" class="text-label">Enter your Zip-code:</label>
+                <input type="text" name="zip" class="text-input" id="zip" placeholder="Zip-code" required>
 
-                    <span class="error" id="error"></span>
 
-                    <input class="button" type="submit" value="Register" onclick="giveInfo()">
+                <label for="package" id="option-label">Choose a sign-up package</label>
+                <select name="package" class="option-input" id="package" required>
+                    <option value="">Choose one of the options</option>
+                    <option value="PT-package">PT-package: 20% discount for your first year</option>
+                    <option value="Tan-package">Tan-package: Accses to tanning beds</option>
+                    <option value="No-package">No sign-up package</option>
+                </select>
 
-                </form>
-            </div>
-        </section>
+                <span class="error" id="error"></span>
+
+                <input class="button" type="submit" value="Register" onclick="giveInfo()">
+
+            </form>
+        </div>
+
     </main>
     <footer>
         <img class="logo-footer" src="img/sport.png" alt="company logo">
         <h3 class="company-name-footer">Rush</h3>
     </footer>
-<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

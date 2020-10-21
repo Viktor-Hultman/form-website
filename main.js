@@ -1,6 +1,6 @@
 
-document.addEventListener('invalid', (function(){
-    return function(e){
+document.addEventListener('invalid', (function () {
+    return function (e) {
         //prevent the browser from showing default error bubble/ hint
         e.preventDefault();
     };
